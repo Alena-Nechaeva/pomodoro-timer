@@ -43,7 +43,12 @@ const TimerBlock = () => {
   const totalPauseTime = useSelector(selectMsOnPauseSum);
   const stopsBtnCounter = useSelector(selectStopsCounter);
   const inUseCounter = useSelector(selectInUseCounter);
-  const currentDate = new Date().toLocaleDateString(); // m/d/yyyy
+  // const currentDate = new Date().toLocaleDateString(); // m/d/yyyy
+  const currentDateObj = new Date();
+  const day = currentDateObj.getDate().toString().padStart(2, '0');
+  const month = (currentDateObj.getMonth() + 1).toString().padStart(2, '0');
+  const year = currentDateObj.getFullYear();
+  const currentDate = `${month}-${day}-${year}`;
 
   useEffect(() => {
     const runIndexDb = async () => {
