@@ -108,7 +108,7 @@ const Timer = ({ id }: { id: string }) => {
         } else if (mode === 'work') dispatch(tickSecondsLeft('work'));
         else if (mode === 'break') dispatch(tickSecondsLeft('break'));
         else if (mode === 'longBreak') dispatch(tickSecondsLeft('longBreak'));
-      }, 10);
+      }, 1000);
     } else {
       if (secondsLeftWork === 0 || secondsLeftBreak === 0 || secondsLeftLongBreak === 0) {
         dispatch(updateWorkMin(settingsWorkMin));
