@@ -32,7 +32,7 @@ const config: Config = withMT({
     },
     extend: {
       boxShadow: {
-        shadowItem: 'rgba(196, 196, 196, 0.5) 0px 5px 15px;',
+        shadowItem: 'rgba(196, 196, 196, 0.5) 0px 5px 15px',
       },
     },
     keyframes: {
